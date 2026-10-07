@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Surreal Media Group | AI-driven business solutions</title>
+<meta name="description" content="Surreal Media Group builds AI-driven business solutions for small businesses: AI assistants that answer, book and follow up, custom business apps, automation, websites and media.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Colour roles (house rule): neutral = information · primary = the one thing that matters ·
+     warm = promises we keep · tint = guidance · (danger unused on a marketing page). */
+  :root{--bg:#061c1d;--surface:#0b2a2b;--surface-2:#123637;--text:#eaf6f3;--muted:#9fc3bd;--primary:#0f766e;--primary-2:#14b8a6;--warm:#ff8a6b;--warm-soft:#2e2220;--tint:#0d3233;--line:#1b4344;--radius:18px;}
+  *{box-sizing:border-box} html{scroll-behavior:smooth}
+  body{margin:0;overflow-wrap:break-word;background:var(--bg);color:var(--text);font:400 16px/1.65 Montserrat,system-ui,sans-serif;
+       -webkit-font-smoothing:antialiased}
+  .wrap{max-width:860px;margin:0 auto;padding:0 20px}
+  header{padding:140px 24px 100px;text-align:center;margin:0;border-radius:0 0 28px 28px;background:linear-gradient(180deg,rgba(0,0,0,.35),var(--bg) 96%),url(art/gold-1.jpg) center/cover}.band{height:220px;border-radius:var(--radius);background:url(art/gold-2.jpg) center/cover;margin:0}
+  .mark{letter-spacing:.32em;font-weight:600;font-size:13px;font-family:Montserrat,sans-serif;color:var(--muted)}
+  h1{font:400 clamp(46px,8vw,78px)/1 "Bebas Neue",Impact,sans-serif;letter-spacing:.02em;margin:18px 0 14px}
+  .lede{color:var(--muted);font-size:19px;max-width:560px;margin:0 auto}
+  .cards{display:grid;gap:14px;margin:26px 0 60px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+        padding:28px 26px;text-align:center}
+  .card h2{font:400 34px/1.1 "Bebas Neue",Impact,sans-serif;letter-spacing:.03em;margin:0 0 18px}
+  .card p{margin:8px auto;max-width:560px;color:var(--muted)}
+  .primary{background:linear-gradient(135deg,var(--primary),var(--primary-2));border:0;color:#fff}
+  .primary,.primary p,.primary h2{color:#fff} .primary p{opacity:.92}
+  .warm{background:var(--warm-soft);border-color:#4a3f1f}
+  @media (prefers-color-scheme: light){ .warm{border-color:#f0dfae} }
+  .tint{background:var(--tint)}
+  .btn{display:inline-block;margin-top:14px;padding:13px 26px;border-radius:999px;background:#ffffff;
+       color:#0b4f49;font-weight:600;text-decoration:none}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:12px;margin-top:16px}
+  .item{background:var(--surface-2);border-radius:14px;padding:18px 16px}
+  .item b{display:block;margin-bottom:4px;color:var(--text)}
+  .item span{color:var(--muted);font-size:15px}
+  ul.ticks{list-style:none;padding:0;margin:14px auto 0;max-width:520px}
+  ul.ticks li{padding:6px 0 6px 0}
+  ul.ticks li::before{content:"✓";color:var(--warm);font-weight:700;margin-right:8px}
+  .steps{counter-reset:s;display:grid;gap:10px;margin-top:16px}
+  .step{background:var(--surface-2);border-radius:14px;padding:16px;counter-increment:s}
+  .step::before{content:counter(s);display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;
+       background:var(--primary);color:#fff;font-weight:700;font-size:14px;margin-bottom:6px}
+  .step b{display:block} .step span{color:var(--muted);font-size:15px}
+  .script{font-family:"Great Vibes",cursive;text-transform:none;font-weight:400;letter-spacing:0;font-size:1.6em;line-height:0;padding:0 .06em;vertical-align:baseline;position:relative;top:-.04em}
+  h1 .script{display:block;font-size:.95em;line-height:1;margin-top:.02em}
+
+  /* ---------- top menu (all sizes; links collapse on phones) ---------- */
+  .nav{position:sticky;top:0;z-index:5;background:rgba(6,28,29,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .navin{max-width:1200px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:center}
+  .logo{font:400 26px/1 "Bebas Neue",sans-serif;letter-spacing:.08em;text-decoration:none}
+  .logo span{color:var(--muted)}
+  .links{display:none}
+  /* ---------- desktop ---------- */
+  @media (min-width: 1000px){
+    body{font-size:17px}
+    .navin{justify-content:space-between}
+    .links{display:flex;gap:30px;align-items:center;font-weight:500;font-size:15px}
+    .links a{text-decoration:none;color:var(--muted)} .links a:hover{color:var(--text)}
+    .links .cta{color:var(--bg);background:var(--text);padding:10px 20px;border-radius:999px;font-weight:600}
+    .wrap{max-width:none;padding:0}
+    header{margin:0;border-radius:0;min-height:clamp(560px,78vh,800px);display:flex;flex-direction:column;justify-content:center;
+           align-items:flex-start;text-align:left;padding:120px max(48px,calc((100vw - 1200px)/2 + 24px)) 120px;
+           background:linear-gradient(90deg,rgba(6,28,29,.96) 0%,rgba(6,28,29,.75) 45%,rgba(6,28,29,.15) 100%),url(art/gold-1.jpg) center/cover}
+    header .mark{display:none}
+    h1{font-size:clamp(72px,7vw,112px);margin:0 0 22px}
+    h1 .script{font-size:.8em}
+    .lede{margin:0;max-width:560px;font-size:20px}
+    .hero-cta{display:inline-block!important}
+    .cards{max-width:1200px;margin:0 auto;padding:70px 24px 90px;gap:26px;grid-template-columns:repeat(12,1fr)}
+    .cards>*{grid-column:span 12}
+    .card{padding:56px 56px}
+    .card h2{font-size:48px}
+    .card p{max-width:720px}
+    .primary{display:grid;grid-template-columns:1.3fr 1fr;column-gap:56px;text-align:left;align-items:center;padding:64px}
+    .primary h2{grid-column:1/-1;font-size:56px}
+    .primary p{margin:0 0 12px;max-width:none}
+    .primary .btn{grid-column:1;justify-self:start}
+    .grid{grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+    .item{padding:26px 20px;text-align:left}
+    .band{height:340px}
+    .steps{grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px}
+    .step{text-align:left;padding:26px 22px}
+    #proof{grid-column:span 7;text-align:left;display:flex;flex-direction:column;justify-content:center}
+    #proof p{margin-left:0} #proof ul.ticks{margin-left:0}
+    #contact{grid-column:span 5;display:flex;flex-direction:column;justify-content:center}
+    footer{max-width:1200px;margin:0 auto;padding:0 24px 50px}
+  }
+  footer{text-align:center;color:var(--muted);font-size:14px;padding:0 0 40px}
+  a{color:inherit}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="navin"><a class="logo" href="#top">SURREAL <span>MEDIA GROUP</span></a><div class="links"><a href="#build">What we build</a><a href="#how">How it works</a><a href="#proof">Why us</a><a class="cta" href="#contact">Talk to us</a></div></div></nav>
+<div class="wrap" id="top">
+  <header>
+        <h1>Business solutions <span class="script">for the new age</span></h1>
+    <p class="lede">We build the tools a small business runs on: AI assistants, custom apps, automation, websites and media. Built to do the work, not just to look good.</p>
+    <a class="btn hero-cta" style="display:none;margin-top:30px;background:var(--text);color:var(--bg)" href="#contact">Talk to us</a>
+  </header>
+
+  <main class="cards">
+    <section class="card primary" id="assistant">
+      <h2>An AI assistant that <span class="script">actually</span> runs your inbox</h2>
+      <p>It reads every message across email, text, Instagram and Facebook, turns each one into a clear task, and drafts the reply in your voice, ready for one tap.</p>
+      <p>It books appointments, follows up on unpaid invoices, and handles one-off jobs on the websites you already use.</p>
+      <a class="btn" href="mailto:admin@surrealmediagroup.com?subject=AI%20assistant%20for%20my%20business">Talk to us</a>
+    </section>
+
+    <section class="card" id="build">
+      <h2>What we build</h2>
+      <div class="grid">
+        <div class="item"><b>AI assistants</b><span>Answer, book, follow up and chase payments, with you approving what goes out.</span></div>
+        <div class="item"><b>Custom business apps</b><span>Bookings, rentals, field crews, client pages. Shaped around how you work.</span></div>
+        <div class="item"><b>Automation</b><span>The repetitive admin between your tools, done in the background.</span></div>
+        <div class="item"><b>Websites</b><span>Fast, clean sites that bring in real inquiries.</span></div>
+        <div class="item"><b>Photo, video &amp; social</b><span>Creative work from the studio where it all started.</span></div>
+      </div>
+    </section>
+
+    <div class="band" role="img" aria-label=""></div>
+    <section class="card tint" id="how">
+      <h2>How it <span class="script">works</span></h2>
+      <div class="steps">
+        <div class="step"><b>We learn your business</b><span>Your channels, tools, prices and the way you talk to customers.</span></div>
+        <div class="step"><b>We build and connect it</b><span>Your assistant and apps, set up on hardware we manage for you.</span></div>
+        <div class="step"><b>A week side by side</b><span>It drafts, you approve, we tune it until it sounds like you.</span></div>
+        <div class="step"><b>It runs every day</b><span>With ongoing updates and support from us.</span></div>
+      </div>
+    </section>
+
+    <section class="card warm" id="proof">
+      <h2>Proven in our own business <span class="script">first</span></h2>
+      <p>We built this to run our own photo and video studio, and we use it every day to answer clients, keep the calendar and follow up on payments.</p>
+      <ul class="ticks">
+        <li>You approve anything that goes out to a customer</li>
+        <li>Your accounts and your data stay yours</li>
+        <li>Built on Claude by Anthropic</li>
+      </ul>
+    </section>
+
+    <section class="card" id="contact">
+      <h2><span class="script">Let's</span> talk</h2>
+      <p>Tell us what eats your week. We'll show you what an assistant could take off your plate.</p>
+      <p><a href="mailto:admin@surrealmediagroup.com">admin@surrealmediagroup.com</a><br>McAllen, Texas</p>
+    </section>
+  </main>
+
+  <footer>© 2026 Surreal Media Group</footer>
+</div>
+</body>
+</html>
